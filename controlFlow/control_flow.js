@@ -49,3 +49,22 @@ let isAuthenticated = true;
 let authenticationStatus = isAuthenticated ? "Authenticated" : "Not authenticated";
 
 console.log("Authentication Status: ", authenticationStatus);
+
+let orgRole = "Employee";
+let orgAccess;
+
+switch (orgRole) {
+    case "Employee":
+        orgAccess = "Dietary Services";
+        break;
+    case "Enrolled Member":
+        orgAccess = "Dietary Services and dietician interaction";
+        break;
+    case "Subscriber":
+        orgAccess = "Partial Dietary Services";
+        break;
+    default:
+        orgAccess = "Please enroll first to avail this facility.";
+    }
+
+    console.log("Organisation access: ", orgAccess);
